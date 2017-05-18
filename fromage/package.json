@@ -49,7 +49,7 @@
     "cordova": {
         "plugins": {
             "cordova-plugin-googleplus": {
-                "REVERSED_CLIENT_ID": "com.googleusercontent.apps.645404664820-sl4g9485faifar712bs5059812mjamhq"
+                "REVERSED_CLIENT_ID": "com.googleusercontent.apps.767372374747-fptv15k0aimikon40eqh952p49647rec"
             },
             "cordova-plugin-console": {},
             "cordova-plugin-device": {},

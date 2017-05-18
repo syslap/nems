@@ -24,21 +24,14 @@ export class LoginPage {
     let that = this;
     let loading = this.loadingCtrl.create({});
 
-    loading.present();
     this.googlePlus.login({})
       .then(function (user) {
-        loading.dismiss();
-        that.storage.set('user', {
-          name: user.displayName,
-          email: user.email,
-          picture: user.imageUrl
-        }).then(function(){
-            that.navCtrl.push(HomePage);
-          }, function (error) {
-            console.log(error);
-          })
+        loading.present();
+        that.navCtrl.push(HomePage);
+        console.log(user);
       }, function (error) {
         loading.dismiss();
+        console.log(error);
       });
   }
 
