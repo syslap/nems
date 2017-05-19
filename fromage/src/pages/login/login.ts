@@ -24,25 +24,22 @@ export class LoginPage {
     let that = this;
     let loading = this.loadingCtrl.create({});
 
+    loading.present();
     this.googlePlus.login({})
       .then(function (user) {
-        loading.present();
-        that.navCtrl.push(HomePage);
-        console.log(user);
+        loading.dismiss();
+        that.storage.set('user', {
+          name: user.displayName,
+          email: user.email,
+          picture: user.imageUrl
+        }).then(function(){
+            that.navCtrl.push(HomePage);
+          }, function (error) {
+            console.log(error);
+          })
       }, function (error) {
         loading.dismiss();
-        console.log(error);
       });
   }
 
-  doGoogleLogout(){
-    let that = this;
-    this.googlePlus.logout()
-      .then(function (response) {
-        that.storage.remove('user');
-        that.navCtrl.push(LoginPage);
-      },function (error) {
-        console.log(error);
-      })
-  }
 }

@@ -48,15 +48,15 @@
     "description": "An Ionic project",
     "cordova": {
         "plugins": {
-            "cordova-plugin-googleplus": {
-                "REVERSED_CLIENT_ID": "com.googleusercontent.apps.767372374747-fptv15k0aimikon40eqh952p49647rec"
-            },
             "cordova-plugin-console": {},
             "cordova-plugin-device": {},
             "cordova-plugin-splashscreen": {},
             "cordova-plugin-statusbar": {},
             "cordova-plugin-whitelist": {},
-            "ionic-plugin-keyboard": {}
+            "ionic-plugin-keyboard": {},
+            "cordova-plugin-googleplus": {
+                "REVERSED_CLIENT_ID": "com.googleusercontent.apps.660643213508-5j8lve41d2ugg2ptdkgkhldho9srg9ud"
+            }
         },
         "platforms": [
             "android"
