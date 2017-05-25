@@ -9,6 +9,7 @@ import { IonicStorageModule } from '@ionic/storage';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
+import {TwitterConnect} from "@ionic-native/twitter-connect";
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { LoginPage } from '../pages/login/login';
     StatusBar,
     SplashScreen,
     GooglePlus,
+    TwitterConnect,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
